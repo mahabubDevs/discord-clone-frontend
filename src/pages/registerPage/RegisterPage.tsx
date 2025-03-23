@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthBox from '../components/AuthBox';
+import AuthBox from '../../components/AuthBox';
 
 const RegisterPage: React.FC = () => {
   return (
