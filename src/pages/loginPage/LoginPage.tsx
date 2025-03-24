@@ -1,22 +1,33 @@
-import React from 'react'
-import AuthBox from '../../components/AuthBox'
-import LoginHead from './LoginHead'
-import LoginPageInputs from './LoginPageInputs'
+import React, { useState } from 'react';
+import AuthBox from '../../components/AuthBox';
+import LoginHead from './LoginHead';
+import LoginPageInputs from './LoginPageInputs';
+import LoginButton from './LoginButton';
 
 const LoginPage: React.FC = () => {
-  const [mail, setMail] = React.useState('');
-  const [password, setPassword] = React.useState('');
+  const [mail, setMail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [isFormValid, setIsFormValid] = useState<boolean>(false);
+  
+  const handleLogin = (): void => {
+    console.log('Login button clicked');
+  };
+
   return (
     <AuthBox>
       <LoginHead />
       <LoginPageInputs
-      mail={mail}
-      setMail={setMail}
-      password={password}
-      setPassword={setPassword}
+        mail={mail}
+        setMail={setMail}
+        password={password}
+        setPassword={setPassword}
+      />
+      <LoginButton
+        isFormValid={isFormValid}
+        handleLogin={handleLogin}
       />
     </AuthBox>
-  )
-}
+  );
+};
 
-export default LoginPage
+export default LoginPage;
