@@ -21,7 +21,7 @@ const AuthBox: React.FC<AuthBoxProps> = ({ children }) => {
       <Box 
         sx={{
           width: 700,
-          height: 400,
+          height: 420,
           bgcolor: '#36393f',
           borderRadius: '5px',
           display: 'flex',

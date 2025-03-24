@@ -6,35 +6,35 @@ import { Tooltip } from '@mui/material';
 
 
 
-interface LoginButtonProps {
-  handleLogin: () => void;
+interface RegisterButtonProps {
+  handleRegister: () => void;
   isFormValid: boolean;
 }
 
   
 
-const LoginButton: React.FC<LoginButtonProps> = ({ handleLogin, isFormValid }) => {
+const RegisterButton: React.FC<RegisterButtonProps> = ({ handleRegister, isFormValid }) => {
   const navigate = useNavigate();
 
   const handlePushToRegister = () => {
-    navigate('/register');
+    navigate('/login');
   };
   return (
     <>
-      <Tooltip title={!isFormValid ? "Please correct Email and Password up to 6 characters to 12 characters" :"Press to log in!"} >
+      <Tooltip title={!isFormValid ? "Please correct User name & E-mail and Password up to 6 characters to 12 characters" :"Press to log in!"} >
       <div>
       <CustomPrimaryButton
-        label="Log in"
-        additionalStyles={{ marginTop: '35px' }}
+        label="Register Now"
+        additionalStyles={{ marginTop: '15px' }}
         disabled={!isFormValid} 
-        onClick={handleLogin}
+        onClick={handleRegister}
           />
           
         </div>
         </Tooltip>
       <RedirectInfo
-        text='Need an account? '
-        redirectText='Create an account'
+        text='I have a account? '
+        redirectText='Login to account'
         additionalStyles={{ marginTop: '5px' }}
         redirectHandler={handlePushToRegister}
       />
@@ -42,4 +42,4 @@ const LoginButton: React.FC<LoginButtonProps> = ({ handleLogin, isFormValid }) =
   );
 };
 
-export default LoginButton;
+export default RegisterButton;

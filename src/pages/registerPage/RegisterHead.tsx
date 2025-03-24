@@ -1,11 +1,11 @@
-import { Typography } from '@mui/material'
 import React from 'react'
+import { Typography } from '@mui/material'
 
-const LoginHead = () => {
+const RegisternHead = () => {
   return (
       <>
-          <Typography variant="h5" sx={{color:"white",paddingTop:"10px"}}>
-              Welcome Back!
+          <Typography variant="h5" sx={{color:"white"}}>
+              Welcome to our platform!
         </Typography>
           <Typography sx={{color:"#b9bbbe"}}>
               We are happy that you are with us!
@@ -14,4 +14,4 @@ const LoginHead = () => {
   )
 }
 
-export default LoginHead
+export default RegisternHead
