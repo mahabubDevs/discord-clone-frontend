@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import AuthBox from '../../components/AuthBox';
 import LoginHead from './LoginHead';
 import LoginPageInputs from './LoginPageInputs';
-import LoginButton from './LoginButton';
+import LoginButton from './LoginFooter';
 
 const LoginPage: React.FC = () => {
   const [mail, setMail] = useState<string>('');
